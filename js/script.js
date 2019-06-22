@@ -20,7 +20,7 @@ function leadingZero(time) {
 
 // Run a standard minute/second/hundredths timer:
 function runTimer() {
-  const currentTime = `${leadingZero(timer[0])  }:${  leadingZero(timer[1])  }:${  leadingZero(timer[2])}`;
+  const currentTime = `${leadingZero(timer[0])}:${leadingZero(timer[1])}:${leadingZero(timer[2])}`;
   theTimer.innerHTML = currentTime;
   timer[3]++;
 
@@ -34,14 +34,14 @@ function spellCheck() {
   const textEntered = testArea.value;
   const originTextMatch = originText.substring(0, textEntered.length);
 
-  if (textEntered == originText) {
+  if (textEntered === originText) {
     clearInterval(interval);
     testWrapper.style.borderColor = '#429890';
-  } else if (textEntered == originTextMatch) {
-            testWrapper.style.borderColor = "#65CCf3";
-        } else {
-            testWrapper.style.borderColor = "#E95D0F";
-        }
+  } else if (textEntered === originTextMatch) {
+    testWrapper.style.borderColor = '#65CCf3';
+  } else {
+    testWrapper.style.borderColor = '#E95D0F';
+  }
 }
 
 // Start the timer:
